@@ -3,13 +3,13 @@
   "edited": 1,
   "files": [
     {
-      "tag": "go",
-      "path" : "test",
+      "tag": "node-npm",
+      "path" : "docker/dockerfile/node.dockerfile",
       "version": 1,
       "params" : [
         {
-          "key": "imageName",
-          "description": "Name of the Image that should be built",
+          "key": "START_CMD",
+          "description": "NPM-Command that should be executed",
           "optional": false
         }
       ],
