@@ -6,7 +6,13 @@
       "tag": "go",
       "path" : "test",
       "version": 1,
-      "params" : [],
+      "params" : [
+        {
+          "key": "imageName",
+          "description": "Name of the Image that should be built",
+          "optional": false
+        }
+      ],
       "technology": "docker"
     }
   ]
