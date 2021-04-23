@@ -13,7 +13,16 @@
           "optional": false
         }
       ],
-      "technology": "docker"
+      "technology": "docker",
+      "renameTo": "dockerfile"
+    },
+    {
+      "tag": "npm",
+      "path":"gitignoreFiles/npm.ignore",
+      "version" : 1,
+      "technology": "gitignore",
+      "params" : [],
+      "renameTo" : ".gitignore"
     }
   ]
 }
