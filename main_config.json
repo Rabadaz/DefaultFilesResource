@@ -6,7 +6,8 @@
       "tag": "go",
       "path" : "test",
       "version": 1,
-      "params" : []
+      "params" : [],
+      "technology": "docker"
     }
   ]
 }
