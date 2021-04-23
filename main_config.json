@@ -14,7 +14,7 @@
         }
       ],
       "technology": "docker",
-      "renameTo": "dockerfile"
+      "rename_to": "dockerfile"
     },
     {
       "tag": "npm",
@@ -22,7 +22,7 @@
       "version" : 1,
       "technology": "gitignore",
       "params" : [],
-      "renameTo" : ".gitignore"
+      "rename_to" : ".gitignore"
     }
   ]
 }
