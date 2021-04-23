@@ -1,0 +1,12 @@
+{
+  "c_version": "1",
+  "edited": 1,
+  "files": [
+    {
+      "tag": "go",
+      "path" : "test",
+      "version": 1,
+      "params" : []
+    }
+  ]
+}
