@@ -13,14 +13,14 @@
           "optional": false
         }
       ],
-      "technology": "docker",
+      "platform": "docker",
       "rename_to": "dockerfile"
     },
     {
       "tag": "npm",
       "path":"gitignoreFiles/npm.ignore",
       "version" : 1,
-      "technology": "gitignore",
+      "platform": "gitignore",
       "params" : [],
       "rename_to" : ".gitignore"
     }
