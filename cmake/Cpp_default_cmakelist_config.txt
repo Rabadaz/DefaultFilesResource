@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.10)
+project($$PROJECT_NAME$$)
+
+#SET(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED on)
+
+#Output File Name
+SET(MAIN_TARGET_NAME $$PROJECT_NAME$$)
+
+#Compiler Flags
+SET(GCC_COVERAGE_COMPILE_FLAGS "-Wc++17-extensions")
+
+#Source Files
+file(GLOB SOURCES "src/*cpp")
+
+add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
+add_executable(${MAIN_TARGET_NAME} ${SOURCES} )
+include_directories(include)
+target_include_directories(${MAIN_TARGET_NAME} PRIVATE src include)
+
+# Run Target
+add_custom_target(
+  run 
+  DEPENDS $$PROJECT_NAME$$
+  COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${MAIN_TARGET_NAME}
+  ) 

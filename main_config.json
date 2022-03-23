@@ -23,6 +23,20 @@
       "platform": "gitignore",
       "params" : [],
       "rename_to" : ".gitignore"
+    },
+    {
+      "tag": "cpp-cmake",
+      "path": "cmake/Cpp_default_cmakelist_config.txt",
+      "version":1,
+      "platform": "cmake",
+      "params": [
+        {
+          "key": "PROJECT_NAME",
+          "description": "The name of the main Target used in cmake",
+          "optional": false
+        }
+      ],
+      "rename_to": "CMakeLists.txt"
     }
   ]
 }
