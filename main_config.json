@@ -37,6 +37,14 @@
         }
       ],
       "rename_to": "CMakeLists.txt"
+    },
+    {
+      "tag": "cpp-cmake-gtest",
+      "path": "cmake/Cpp_deafault_cmakelist_config_with_gtest.txt",
+      "version":1,
+      "platform": "cmake"
+      "params":[],
+      "rename_to":"CMakeLists.txt"
     }
   ]
 }

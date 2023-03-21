@@ -1,0 +1,45 @@
+cmake_minimum_required(VERSION 3.24)
+
+set(GlobalName Radio)
+
+project(${GlobalName})
+
+#Set Language Standards
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED on)
+set(CMAKE_EXPORT_COMPILE_COMMANDS on)
+set(CMAKE_C_Standard 98)
+
+#Set Compiler Flags
+SET(GCC_COVERAGE_COMPILE_FLAGS "-Wc++17-extensions")
+
+#Search for Sources and Tests
+include_directories(include)
+file(GLOB_RECURSE SOURCES src/*c*)
+file(GLOB_RECURSE TESTS test/test*c*)
+
+add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
+add_executable(${GlobalName} ${SOURCES} main.cpp)
+
+#download Gtest Framework
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+add_executable(
+        testS1
+        ${SOURCES}
+        ${TESTS}
+)
+target_link_libraries(
+        testS1
+        GTest::gtest_main
+)
+include(GoogleTest)
+gtest_discover_tests(testS1)
